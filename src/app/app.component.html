@@ -1,0 +1,27 @@
+<app-header />
+<body>
+  <div class="data">
+    <app-data (dataSelect)="onDataSelect($event)" />
+  </div>
+  <div class="button">
+    <app-navigation (componentChoose)="setCurentComponent($event)"/>
+  </div>
+  @if (curentComponent==='info') 
+  {
+    <div class="info">
+      <app-info />
+    </div>
+  }
+  @if (curentComponent==='table') 
+  {
+    <div class="info">
+      <app-table [data]="data" />
+    </div>
+  }
+  @if (curentComponent==='map') 
+  {
+    <div class="map">
+      <app-map [data]="data"/>
+    </div>
+  }
+</body>

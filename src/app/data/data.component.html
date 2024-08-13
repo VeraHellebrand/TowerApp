@@ -1,0 +1,19 @@
+<div>
+  <form [formGroup]="form" (ngSubmit)="uploadCSV(fileInput)">
+    <label for="fileInput"> Upload CSV: </label>
+    <input
+      class="uploadCSV"
+      type="file"
+      id="fileInput"
+      #fileInput
+      formControlName="file"
+      accept=".csv"
+    />
+    <button type="submit" [disabled]="form.invalid">Upload</button>
+    @if (!isLoaded) {
+      <p>Data se nahrají stisknutim "Upload"</p>
+    } @else {
+      <p>Data nahrána</p>
+    }
+  </form>
+</div>

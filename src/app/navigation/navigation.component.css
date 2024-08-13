@@ -1,0 +1,7 @@
+button {
+  font-size: 1.5rem;
+}
+
+.activeButton {
+  background-color: #7f43ce;
+}
